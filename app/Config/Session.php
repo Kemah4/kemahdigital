@@ -5,6 +5,7 @@ namespace Config;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Session\Handlers\BaseHandler;
 use CodeIgniter\Session\Handlers\FileHandler;
+use CodeIgniter\Session\Handlers\ArrayHandler;
 
 class Session extends BaseConfig
 {
@@ -21,7 +22,7 @@ class Session extends BaseConfig
      *
      * @phpstan-var class-string<BaseHandler>
      */
-    public string $driver = FileHandler::class;
+    public string $driver = ArrayHandler::class;
 
     /**
      * --------------------------------------------------------------------------
